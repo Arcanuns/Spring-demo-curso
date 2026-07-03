@@ -1,25 +1,12 @@
 package com.example.demo;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootApplication
-@RestController
-public class DemoApplication {
+@SpringBootTest
+class DemoApplicationTests {
 
-	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
-	}
-
-	@GetMapping("/")
-	public String home() {
-		return "Spring Boot rodando!";
-	}
-
-	@GetMapping("/hello")
-	public String hello() {
-		return "Hello AWS!";
-	}
+    @Test
+    void contextLoads() {
+    }
 }
